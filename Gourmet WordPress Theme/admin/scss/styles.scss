@@ -1,0 +1,270 @@
+//todo:отступы слева и справа вложенных блоков, убрать или сделать меньше
+//todo:текстовые поля сделать отступы
+.KHT_backEnd {
+  // Import Bootstrap Compass integration
+  @import "bootstrap-compass";
+
+  // Import custom Bootstrap variables
+  @import "bootstrap-variables";
+
+  // Import Bootstrap for Sass
+  @import "bootstrap";
+
+  .panel {
+    background-color: rgba(white, .8);
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  label {
+    color: rgb(65, 65, 65);
+  }
+
+  label {
+    padding-left: 0 !important;
+    font-weight: 300 !important;
+    display: block;
+    margin-bottom: 2px !important;
+    margin-top: 5px;
+    height: 20px !important;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+  }
+
+  //  #submit {
+  //    .js & {
+  //      display: none;
+  //    }
+  //  }
+
+  .remove-button {
+    text-align: center;
+  }
+
+  .preview-upload {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgb(217, 237, 247);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgb(16, 50, 79);
+    height: 120px;
+  }
+  .upload_image_button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 40px;
+  }
+
+  .btn {
+    display: block;
+    margin: 10px auto;
+    float: none;
+    width: 100%;
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .button-wrap {
+    background-color: rgba(100, 230, 253, 0.33);
+  }
+
+//  .checkbox label {
+//    text-align: center;
+//    padding-left: 0;
+//    font-weight: 300;
+//  }
+
+  .checkbox {
+    position: relative;
+    display: block;
+    margin: 0 auto !important;
+
+    label{
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      margin: 5px auto 0 !important;
+      position: relative !important;
+      width: 25px;
+      height: 25px;
+
+      &,
+      &:focus {
+        outline: none;
+      }
+
+      &:before {
+        font-size: 25px;
+        margin: 0;
+        text-align: center;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 255, 0, 0.3);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      -webkit-transition: border-color .4s;
+      -moz-transition: border-color .4s;
+      -ms-transition: border-color .4s;
+      -o-transition: border-color .4s;
+      transition: border-color .4s;
+      &.saved {
+        border-color: transparent;
+      }
+    }
+  }
+
+  input[type=checkbox].checkbox {
+
+  }
+
+  select,
+  input[type=text],
+  input[type=checkbox].checkbox,
+  .upload_image_button {
+    -webkit-transition: box-shadow .4s;
+    -moz-transition: box-shadow .4s;
+    -ms-transition: box-shadow .4s;
+    -o-transition: box-shadow .4s;
+    transition: box-shadow .4s;
+
+    box-shadow: none;
+
+    &.saved {
+      &,
+      & + .upload_image_button {
+        box-shadow: 0 0 10px lime;
+      }
+    }
+  }
+
+  .parent {
+
+    border: #8B9394 1px solid;
+    border-radius: 5px;
+    margin: 10px 0;
+
+    .max-wrap {
+      padding: 10px 0;
+
+      //      &>*{
+      //        padding: 10px 0;
+      //        border: solid rgb(0, 215, 255);
+      //        margin: 20px 0;
+      //        border-width: 1px 0;
+      //        border-radius: 20px;
+      //      }
+    }
+  }
+
+  .screenShot {
+    padding: 3px;
+    background: rgb(201, 244, 252);
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 5px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+}
+
+#wpadminbar {
+
+  #KHT_save {
+    position: absolute;
+    right: 15%;
+    text-align: right;
+    width: 150px;
+    display: block;
+
+    -webkit-transition: color .7s;
+    -moz-transition: color .7s;
+    -ms-transition: color .7s;
+    -o-transition: color .7s;
+    transition: color .7s;
+
+    .text {
+      margin-right: 35px;
+      display: block;
+      text-align: center;
+      background-color: #404F5C;
+      color: white;
+
+      -webkit-transition: background-color .7s;
+      -moz-transition: background-color .7s;
+      -ms-transition: background-color .7s;
+      -o-transition: background-color .7s;
+      transition: background-color .7s;
+
+    }
+
+    .icon {
+      height: 26px;
+      display: none;
+      position: absolute;
+      top: 3px;
+      right: 0;
+    }
+
+    &.saving {
+      .text {
+        background-color: #3DA0E1;
+      }
+    }
+
+    @media screen and (max-width: 782px) {
+
+      .text {
+        display: none;
+      }
+
+      .icon {
+        height: 32px;
+        margin-top: 7px;
+      }
+
+    }
+  }
+}
+
+.fancybox-overlay.fancybox-overlay-fixed {
+  z-index: 99999;
+  .fancybox-skin {
+    padding: 0 !important;
+  }
+}
+
+.no-js-error{
+  display: none;
+
+  .no-js &{
+    display: block;
+  }
+}
+
+.db_debug {
+  background-color: transparent;
+
+  -webkit-transition: background-color 2s;
+  -moz-transition: background-color 2s;
+  -ms-transition: background-color 2s;
+  -o-transition: background-color 2s;
+  transition: background-color 2s;
+
+  &.active {
+    background: #fbffc2;
+  }
+}
